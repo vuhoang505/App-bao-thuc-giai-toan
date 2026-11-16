@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/alarm_settings" android:textSize="28sp" android:textStyle="bold" android:textColor="@color/primary" />
+        <TimePicker android:id="@+id/timePicker" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:timePickerMode="clock" />
+        <TextView android:id="@+id/textNextAlarm" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center" android:textColor="@color/primary" android:textStyle="bold" />
+
+        <TextView style="@style/SectionTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/alarm_name" />
+        <EditText android:id="@+id/editLabel" android:layout_width="match_parent" android:layout_height="56dp"
+            android:background="@drawable/input_background" android:hint="@string/alarm_label_hint" android:importantForAutofill="no" android:inputType="textCapSentences" android:maxLength="40" />
+
+        <TextView style="@style/SectionTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/repeat" />
+        <Spinner android:id="@+id/spinnerRepeat" android:layout_width="match_parent" android:layout_height="52dp" android:background="@drawable/input_background" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:orientation="horizontal">
+            <CheckBox android:id="@+id/dayMon" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@drawable/day_selector" android:button="@null" android:gravity="center" android:text="@string/day_mon" android:textColor="@color/day_text" />
+            <CheckBox android:id="@+id/dayTue" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@drawable/day_selector" android:button="@null" android:gravity="center" android:text="@string/day_tue" android:textColor="@color/day_text" />
+            <CheckBox android:id="@+id/dayWed" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@drawable/day_selector" android:button="@null" android:gravity="center" android:text="@string/day_wed" android:textColor="@color/day_text" />
+            <CheckBox android:id="@+id/dayThu" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@drawable/day_selector" android:button="@null" android:gravity="center" android:text="@string/day_thu" android:textColor="@color/day_text" />
+            <CheckBox android:id="@+id/dayFri" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@drawable/day_selector" android:button="@null" android:gravity="center" android:text="@string/day_fri" android:textColor="@color/day_text" />
+            <CheckBox android:id="@+id/daySat" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@drawable/day_selector" android:button="@null" android:gravity="center" android:text="@string/day_sat" android:textColor="@color/day_text" />
+            <CheckBox android:id="@+id/daySun" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:background="@drawable/day_selector" android:button="@null" android:gravity="center" android:text="@string/day_sun" android:textColor="@color/day_text" />
+        </LinearLayout>
+
+        <TextView style="@style/SectionTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/math_section" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/difficulty" />
+        <Spinner android:id="@+id/spinnerDifficulty" android:layout_width="match_parent" android:layout_height="52dp" android:background="@drawable/input_background" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/question_count_label" />
+        <Spinner android:id="@+id/spinnerCount" android:layout_width="match_parent" android:layout_height="52dp" android:background="@drawable/input_background" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/operation" />
+        <Spinner android:id="@+id/spinnerOperation" android:layout_width="match_parent" android:layout_height="52dp" android:background="@drawable/input_background" />
+
+        <TextView style="@style/SectionTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sound" />
+        <TextView android:id="@+id/textRingtone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/default_alarm_sound" />
+        <Button android:id="@+id/buttonRingtone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/button_secondary" android:text="@string/choose_ringtone" android:textAllCaps="false" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/alarm_volume" />
+        <SeekBar android:id="@+id/seekVolume" android:layout_width="match_parent" android:layout_height="wrap_content" android:max="100" />
+        <androidx.appcompat.widget.SwitchCompat android:id="@+id/switchVibration" android:layout_width="match_parent" android:layout_height="52dp" android:text="@string/vibration" />
+        <androidx.appcompat.widget.SwitchCompat android:id="@+id/switchSnooze" android:layout_width="match_parent" android:layout_height="52dp" android:text="@string/snooze_enabled" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:orientation="horizontal">
+            <Button android:id="@+id/buttonCancel" android:layout_width="0dp" android:layout_height="52dp" android:layout_weight="1" android:background="@drawable/button_secondary" android:text="@string/cancel" android:textAllCaps="false" />
+            <Space android:layout_width="12dp" android:layout_height="1dp" />
+            <Button android:id="@+id/buttonSave" style="@style/PrimaryButton" android:layout_width="0dp" android:layout_height="52dp" android:layout_weight="1" android:text="@string/save" />
+        </LinearLayout>
+        <Space android:layout_width="1dp" android:layout_height="24dp" />
+    </LinearLayout>
+</ScrollView>

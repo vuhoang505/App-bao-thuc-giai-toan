@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="difficulty_labels">
+        <item>@string/difficulty_easy</item>
+        <item>@string/difficulty_medium</item>
+        <item>@string/difficulty_hard</item>
+    </string-array>
+    <string-array name="question_count_labels">
+        <item>1</item><item>3</item><item>5</item>
+    </string-array>
+    <string-array name="operation_labels">
+        <item>@string/operation_random</item>
+        <item>@string/operation_add</item>
+        <item>@string/operation_subtract</item>
+        <item>@string/operation_multiply</item>
+        <item>@string/operation_divide</item>
+    </string-array>
+    <string-array name="repeat_labels">
+        <item>@string/repeat_once</item>
+        <item>@string/repeat_daily</item>
+        <item>@string/repeat_weekdays</item>
+        <item>@string/repeat_custom</item>
+    </string-array>
+    <string-array name="ringtone_source_labels">
+        <item>@string/ringtone_source_system</item>
+        <item>@string/ringtone_source_file</item>
+    </string-array>
+</resources>

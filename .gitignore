@@ -1,0 +1,8 @@
+.gradle/
+.idea/
+.vscode/
+local.properties
+**/build/
+*.iml
+captures/
+app/release/
